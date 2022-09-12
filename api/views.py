@@ -20,9 +20,6 @@ class Listener(APIView):
         return HttpResponse("404")
     serializer_class=WebhookSerializer
     def post(self,request,format=None):
-        # # qq = Request()
-        # # qq.
-        # print(request.META)
         requestData=request.data
         if requestData!=None:
             contentString = str(requestData)
